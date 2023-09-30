@@ -182,15 +182,14 @@ namespace KruK
 
         static bool IsUnauthorizedLocation(string filePath)
         {
-            // Verifique se o arquivo está em um local não autorizado (por exemplo, pasta temporária)
+        
             string unauthorizedLocation = Path.GetTempPath();
             return filePath.StartsWith(unauthorizedLocation, StringComparison.OrdinalIgnoreCase);
         }
 
         static void HandleUnauthorizedScriptExecution(string filePath)
         {
-            // Implemente a lógica para lidar com a execução não autorizada de scripts
-            // Por exemplo, você pode bloquear a execução, mover o arquivo ou registrar o evento
+            
             Console.WriteLine($"Execução de script não autorizado bloqueada: {filePath}");
         }
 
@@ -210,14 +209,4 @@ namespace KruK
             }
         }
 
-        // Função para configurar um firewall simples (bloqueio de portas não utilizadas)
-        static void ConfigureFirewall()
-        {
-            // Implemente o código para bloquear portas não utilizadas ou configurar regras de firewall aqui.
-            // Isso pode variar dependendo do sistema operacional e da infraestrutura de rede.
-            // Consulte a documentação relevante para obter informações específicas.
-        }
-
-        // Outras medidas de segurança em camadas podem ser implementadas conforme necessário.
-    }
 }
